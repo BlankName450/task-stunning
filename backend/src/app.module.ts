@@ -7,7 +7,7 @@ import { SectionModule } from './section/section.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      process.env.MONGODB_URI || (() => { throw new Error('MONGODB_URI is not set'); })()
+      process.env.MONGODB_URI || 'mongodb://localhost:27017/stunning-ai-site-builder'
     ),
     SectionModule,
   ],
